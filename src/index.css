@@ -1,0 +1,546 @@
+/* ============================================
+   Custom Fonts (KOOkies)
+   ============================================ */
+@font-face {
+  font-family: 'KOOkies';
+  src: url('./assets/fonts/KOOkies-Thin.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'KOOkies';
+  src: url('./assets/fonts/KOOkies-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'KOOkies';
+  src: url('./assets/fonts/KOOkies-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'KOOkies';
+  src: url('./assets/fonts/KOOkies-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'KOOkies';
+  src: url('./assets/fonts/KOOkies-SemiBold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'KOOkies';
+  src: url('./assets/fonts/KOOkies-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'KOOkies';
+  src: url('./assets/fonts/KOOkies-ExtraBold.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'KORubbama';
+  src: url('./assets/fonts/KORubbama-Black.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'KORubbama Expanded';
+  src: url('./assets/fonts/KORubbamaExpanded-BlackExpanded.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'KOAynama Curved';
+  src: url('./assets/fonts/KOAynama-Curved.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'KOAynama Sharp';
+  src: url('./assets/fonts/KOAynama-Sharp.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ============================================
+   Apple Design System — CSS Custom Properties
+   Adapted for Arabic (RTL) with KORubbama, KOOkies & Tajawal
+   ============================================ */
+
+:root {
+  /* ---- Colors ---- */
+  --color-primary: #0066cc;
+  --color-primary-focus: #0071e3;
+  --color-primary-on-dark: #2997ff;
+  --color-ink: #1d1d1f;
+  --color-body: #1d1d1f;
+  --color-body-on-dark: #ffffff;
+  --color-body-muted: #cccccc;
+  --color-ink-muted-80: #333333;
+  --color-ink-muted-48: #7a7a7a;
+  --color-divider-soft: #f0f0f0;
+  --color-hairline: #e0e0e0;
+  --color-canvas: #ffffff;
+  --color-canvas-parchment: #f5f5f7;
+  --color-surface-pearl: #fafafc;
+  --color-surface-tile-1: #272729;
+  --color-surface-tile-2: #2a2a2c;
+  --color-surface-tile-3: #252527;
+  --color-surface-black: #000000;
+  --color-surface-chip: #d2d2d7;
+  --color-on-primary: #ffffff;
+  --color-on-dark: #ffffff;
+
+  /* ---- Rounded ---- */
+  --rounded-none: 0px;
+  --rounded-xs: 5px;
+  --rounded-sm: 8px;
+  --rounded-md: 11px;
+  --rounded-lg: 18px;
+  --rounded-pill: 9999px;
+  --rounded-full: 9999px;
+
+  /* ---- Spacing ---- */
+  --space-xxs: 4px;
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 17px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-xxl: 48px;
+  --space-section: 80px;
+
+  /* ---- Font Family ---- */
+  --font-display: 'KOOkies', 'Tajawal', system-ui, -apple-system, sans-serif;
+  --font-body: 'KOOkies', 'Tajawal', system-ui, -apple-system, sans-serif;
+
+  /* ---- Base ---- */
+  font-family: var(--font-body);
+  line-height: 1.47;
+  font-weight: 400;
+  color-scheme: light;
+  color: var(--color-body);
+  background-color: var(--color-canvas);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ============================================
+   Dark Mode Theme Override
+   ============================================ */
+[data-theme="dark"] {
+  --color-ink: #f5f5f7;
+  --color-body: #f5f5f7;
+  --color-ink-muted-80: #d1d1d6;
+  --color-ink-muted-48: #8e8e93;
+  --color-divider-soft: #2c2c2e;
+  --color-hairline: #3a3a3c;
+  --color-canvas: #000000;
+  --color-canvas-parchment: #1c1c1e;
+  --color-surface-pearl: #1c1c1e;
+  --color-surface-black: #000000;
+  --color-surface-chip: #3a3a3c;
+  --color-primary: #0a84ff;
+  --color-primary-focus: #409cff;
+  color-scheme: dark;
+}
+
+/* ============================================
+   Decorative Font Overrides
+   ============================================ */
+/* ============================================
+   Decorative Font Overrides (تحويل الخطوط بالأرقام)
+   ============================================ */
+[data-font="kookies"] body, [data-font="kookies"] body * {
+  font-family: 'KOOkies', 'Tajawal', sans-serif !important;
+}
+[data-font="rubbama"] body, [data-font="rubbama"] body * {
+  font-family: 'KORubbama', 'Tajawal', sans-serif !important;
+}
+[data-font="rubbama-expanded"] body, [data-font="rubbama-expanded"] body * {
+  font-family: 'KORubbama Expanded', 'Tajawal', sans-serif !important;
+}
+[data-font="aynama-curved"] body, [data-font="aynama-curved"] body * {
+  font-family: 'KOAynama Curved', 'Tajawal', sans-serif !important;
+}
+[data-font="aynama-sharp"] body, [data-font="aynama-sharp"] body * {
+  font-family: 'KOAynama Sharp', 'Tajawal', sans-serif !important;
+}
+[data-font="aref-ruqaa"] body, [data-font="aref-ruqaa"] body * {
+  font-family: 'Aref Ruqaa', 'Tajawal', serif !important;
+}
+[data-font="amiri"] body, [data-font="amiri"] body * {
+  font-family: 'Amiri', 'Tajawal', serif !important;
+}
+
+/* ============================================
+   Dynamic Font Size & Weight Scaling (شريط السحب التفاعلي)
+   ============================================ */
+:root {
+  --font-scale: 1;
+  --font-custom-weight: 400;
+}
+
+/* 1. Dynamic Font Weight Slider (300 to 900) */
+body, body *, 
+h1, h2, h3, h4, h5, h6, 
+p, span, a, button, input, label, div,
+.hero-title, .section-title, .package-card-title, .package-card-description {
+  font-weight: var(--font-custom-weight, 400) !important;
+}
+
+/* 2. Dynamic Font Size Slider (70% to 150%) */
+.text-hero, .hero-title {
+  font-size: calc(72px * var(--font-scale, 1)) !important;
+}
+.text-display-lg, .section-title {
+  font-size: calc(40px * var(--font-scale, 1)) !important;
+}
+.text-display-md, .section-subtitle, .package-card-title, h3 {
+  font-size: calc(24px * var(--font-scale, 1)) !important;
+}
+p, span, a, button, label, li, .package-card-description, .why-card-desc, .sidebar-link-label {
+  font-size: calc(17px * var(--font-scale, 1)) !important;
+}
+
+/* ---- Global Reset ---- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--color-canvas);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  font-size: calc(17px * var(--font-scale, 1));
+  letter-spacing: -0.374px;
+  direction: rtl;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ============================================
+   Typography Classes (Apple Design Tokens)
+   ============================================ */
+
+/* Hero Display — 56px / 600 / tight */
+.text-hero {
+  font-family: var(--font-display);
+  font-size: 56px;
+  font-weight: 700; /* 700 in Tajawal ≈ 600 SF Pro feel */
+  line-height: 1.07;
+  letter-spacing: -0.28px;
+  color: var(--color-ink);
+}
+
+/* Display Large — 40px / 600 */
+.text-display-lg {
+  font-family: var(--font-display);
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: 0;
+  color: var(--color-ink);
+}
+
+/* Display Medium — 34px / 600 */
+.text-display-md {
+  font-family: var(--font-display);
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: -0.374px;
+  color: var(--color-ink);
+}
+
+/* Lead — 28px / 400 */
+.text-lead {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.25;
+  letter-spacing: 0.196px;
+  color: var(--color-ink);
+}
+
+/* Lead Airy — 24px / 300 */
+.text-lead-airy {
+  font-family: var(--font-body);
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+
+/* Tagline — 21px / 600 */
+.text-tagline {
+  font-family: var(--font-display);
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1.19;
+  letter-spacing: 0.231px;
+}
+
+/* Body Strong — 17px / 600 */
+.text-body-strong {
+  font-family: var(--font-body);
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.24;
+  letter-spacing: -0.374px;
+}
+
+/* Body — 17px / 400 (default) */
+.text-body {
+  font-family: var(--font-body);
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.47;
+  letter-spacing: -0.374px;
+}
+
+/* Caption — 14px / 400 */
+.text-caption {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.43;
+  letter-spacing: -0.224px;
+}
+
+/* Caption Strong — 14px / 600 */
+.text-caption-strong {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.29;
+  letter-spacing: -0.224px;
+}
+
+/* Fine Print — 12px / 400 */
+.text-fine-print {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.0;
+  letter-spacing: -0.12px;
+  color: var(--color-ink-muted-48);
+}
+
+/* ============================================
+   Dark Surface Text Variants
+   ============================================ */
+.on-dark .text-hero,
+.on-dark .text-display-lg,
+.on-dark .text-display-md,
+.on-dark .text-lead,
+.on-dark .text-tagline,
+.on-dark .text-body-strong {
+  color: var(--color-on-dark);
+}
+
+.on-dark .text-body,
+.on-dark .text-lead-airy {
+  color: var(--color-body-muted);
+}
+
+.on-dark .text-caption,
+.on-dark .text-fine-print {
+  color: var(--color-body-muted);
+}
+
+/* ============================================
+   Button Styles (Apple Design Tokens)
+   ============================================ */
+
+/* Primary Blue Pill CTA */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+  font-family: var(--font-body);
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.0;
+  letter-spacing: -0.374px;
+  border: none;
+  border-radius: var(--rounded-pill);
+  padding: 11px 22px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.15s ease;
+}
+
+.btn-primary:active {
+  transform: scale(0.95);
+}
+
+.btn-primary:focus-visible {
+  outline: 2px solid var(--color-primary-focus);
+  outline-offset: 2px;
+}
+
+/* Secondary Ghost Pill */
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: transparent;
+  color: var(--color-primary);
+  font-family: var(--font-body);
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.0;
+  letter-spacing: -0.374px;
+  border: 1px solid var(--color-primary);
+  border-radius: var(--rounded-pill);
+  padding: 11px 22px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.15s ease;
+}
+
+.btn-secondary:active {
+  transform: scale(0.95);
+}
+
+/* Text Link */
+.text-link {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.text-link:hover {
+  text-decoration: underline;
+}
+
+.on-dark .text-link {
+  color: var(--color-primary-on-dark);
+}
+
+/* ============================================
+   General Elements
+   ============================================ */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--color-ink);
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+}
+
+/* ============================================
+   Responsive Typography (Arabic-optimized)
+   ============================================ */
+
+@media (max-width: 1068px) {
+  .text-hero {
+    font-size: 40px;
+  }
+  .text-display-lg {
+    font-size: 34px;
+  }
+  .text-display-md {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 640px) {
+  .text-hero {
+    font-size: 34px;
+  }
+  .text-display-lg {
+    font-size: 28px;
+  }
+  .text-display-md {
+    font-size: 24px;
+  }
+  .text-lead {
+    font-size: 21px;
+  }
+}
+
+@media (max-width: 419px) {
+  .text-hero {
+    font-size: 28px;
+  }
+  .text-display-lg {
+    font-size: 24px;
+  }
+}

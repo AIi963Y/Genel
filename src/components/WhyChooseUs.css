@@ -1,0 +1,107 @@
+/* ============================================
+   "Why Choose Us" Section — Apple Clean Grid
+   ============================================ */
+
+.why-section {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-section) 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xxl);
+}
+
+.why-header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.why-title {
+  font-family: var(--font-display);
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--color-ink);
+  letter-spacing: -0.5px;
+}
+
+.why-subtitle {
+  font-family: var(--font-body);
+  font-size: 19px;
+  color: var(--color-ink-muted-48);
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+/* ---- Features Grid ---- */
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-lg);
+}
+
+/* ---- Feature Card ---- */
+.why-card {
+  background-color: var(--color-canvas-parchment);
+  border: 1px solid var(--color-divider-soft);
+  border-radius: var(--rounded-lg);
+  padding: var(--space-xl) var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-sm);
+  transition: transform 0.35s cubic-bezier(0.25, 0.8, 0.25, 1),
+              box-shadow 0.35s cubic-bezier(0.25, 0.8, 0.25, 1),
+              border-color 0.3s ease;
+}
+
+.why-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06);
+  border-color: rgba(0, 102, 204, 0.15);
+}
+
+.why-card-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--rounded-md);
+  background: linear-gradient(135deg, #0066cc 0%, #0a84ff 100%);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-xs);
+}
+
+.why-card-title {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-ink);
+}
+
+.why-card-desc {
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--color-ink-muted-48);
+  line-height: 1.5;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 1024px) {
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+  .why-title {
+    font-size: 32px;
+  }
+}

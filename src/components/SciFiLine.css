@@ -1,0 +1,52 @@
+/* ============================================
+   Smooth Glass Divider Line — Apple Action Blue
+   ============================================ */
+
+.scifi-line-section {
+  position: relative;
+  width: 100%;
+  padding: var(--space-xl) 0 var(--space-xxl) 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: visible;
+}
+
+/* The track that holds the line */
+.scifi-line-track {
+  width: 80%;
+  max-width: 1200px;
+  height: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: 6px;
+  background: rgba(0, 102, 204, 0.1);
+  overflow: hidden;
+}
+
+/* The actual glowing glass line */
+.scifi-glass-line {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, var(--color-primary), transparent);
+  box-shadow: 
+    0 0 10px rgba(0, 102, 204, 0.6),
+    0 0 20px rgba(0, 102, 204, 0.3);
+  border-radius: 6px;
+}
+
+/* Divider label */
+.divider-label {
+  margin-top: var(--space-lg);
+  text-align: center;
+}
+
+.divider-label-text {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--color-primary);
+}

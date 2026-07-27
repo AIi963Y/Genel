@@ -1,0 +1,241 @@
+/* ============================================
+   App Layout — Apple-style Clean Container
+   ============================================ */
+
+.app-container {
+  min-height: 100vh;
+  background-color: var(--color-canvas);
+}
+
+.main-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Spacer matching the TopNav height (nav bar + parchment band) */
+.header-spacer {
+  height: 100vh; /* Match full viewport since nav is fixed */
+}
+
+/* White content area below the divider line */
+.below-line-region {
+  background-color: var(--color-canvas);
+  padding: var(--space-section) 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* ============================================
+   Packages Section Styles
+   ============================================ */
+
+.packages-section {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xxl);
+}
+
+.section-header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--color-ink);
+  letter-spacing: -0.5px;
+}
+
+.section-subtitle {
+  font-family: var(--font-body);
+  font-size: 19px;
+  color: var(--color-ink-muted-48);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ---- Packages Grid ---- */
+.packages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--space-xl);
+}
+
+/* ---- Premium Package Card ---- */
+.package-card {
+  background-color: var(--color-canvas);
+  border: 1px solid var(--color-hairline);
+  border-radius: var(--rounded-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), 
+              box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
+              border-color 0.3s ease;
+  will-change: transform, box-shadow;
+}
+
+.package-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1), 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-color: rgba(0, 102, 204, 0.15);
+}
+
+.package-card-img-wrapper {
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+  background-color: var(--color-canvas-parchment);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.package-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.package-card:hover .package-card-img {
+  transform: scale(1.04);
+}
+
+.package-card-placeholder-img {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #1d1d1f 0%, #2a2a2c 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-on-dark);
+  font-family: var(--font-display);
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.package-card-content {
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: var(--space-sm);
+}
+
+.package-card-tag {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--color-primary);
+  text-transform: uppercase;
+}
+
+.package-card-title {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-ink);
+}
+
+.package-card-description {
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--color-ink-muted-80);
+  line-height: 1.5;
+  flex-grow: 1;
+}
+
+.package-card-footer {
+  margin-top: var(--space-md);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--color-divider-soft);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.package-card-price {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-ink);
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-xs);
+}
+
+.price-old {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--color-ink-muted-48);
+  text-decoration: line-through;
+}
+
+.package-card-actions {
+  display: flex;
+  gap: var(--space-xs);
+}
+
+.package-card-actions .btn-primary,
+.package-card-actions .btn-secondary {
+  flex: 1;
+  padding: 10px 16px;
+  font-size: 15px;
+}
+
+/* ============================================
+   Package Card Badge
+   ============================================ */
+
+.package-card-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 2;
+  background: var(--color-primary);
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 5px 14px;
+  border-radius: var(--rounded-pill);
+  letter-spacing: 0.3px;
+  box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);
+}
+
+.package-card-badge.badge-gold {
+  background: linear-gradient(135deg, #d4a853 0%, #f0c970 50%, #d4a853 100%);
+  color: #1d1d1f;
+  box-shadow: 0 4px 12px rgba(212, 168, 83, 0.35);
+}
+
+/* ============================================
+   Responsive Settings
+   ============================================ */
+@media (max-width: 768px) {
+  .header-spacer {
+    height: 75vh;
+  }
+  .section-title {
+    font-size: 32px;
+  }
+  .packages-grid {
+    grid-template-columns: 1fr;
+  }
+  .package-card-img-wrapper {
+    height: 220px;
+  }
+}
+

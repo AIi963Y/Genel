@@ -1,0 +1,153 @@
+/* ============================================
+   Cultural Ornaments Master Styling
+   ============================================ */
+
+.ornament-wrapper {
+  width: 100%;
+  padding: 36px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.ornament-container {
+  width: 90%;
+  max-width: 950px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.ornament-gold-line {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(
+    90deg, 
+    transparent 0%, 
+    rgba(179, 135, 40, 0.2) 20%, 
+    rgba(252, 246, 186, 0.8) 50%, 
+    rgba(179, 135, 40, 0.2) 80%, 
+    transparent 100%
+  );
+  box-shadow: 0 0 8px rgba(212, 175, 55, 0.3);
+}
+
+.saudi-line {
+  background: linear-gradient(
+    90deg, 
+    transparent 0%, 
+    rgba(0, 108, 53, 0.3) 20%, 
+    rgba(212, 175, 55, 0.8) 50%, 
+    rgba(0, 108, 53, 0.3) 80%, 
+    transparent 100%
+  );
+}
+
+.kuwaiti-line {
+  background: linear-gradient(
+    90deg, 
+    transparent 0%, 
+    rgba(0, 51, 102, 0.3) 20%, 
+    rgba(229, 193, 88, 0.8) 50%, 
+    rgba(0, 51, 102, 0.3) 80%, 
+    transparent 100%
+  );
+}
+
+.andalusian-line {
+  background: linear-gradient(
+    90deg, 
+    transparent 0%, 
+    rgba(197, 160, 89, 0.2) 20%, 
+    rgba(243, 229, 171, 0.9) 50%, 
+    rgba(197, 160, 89, 0.2) 80%, 
+    transparent 100%
+  );
+}
+
+.mexican-line {
+  background: linear-gradient(
+    90deg, 
+    transparent 0%, 
+    rgba(255, 69, 0, 0.3) 20%, 
+    rgba(255, 215, 0, 0.9) 50%, 
+    rgba(255, 69, 0, 0.3) 80%, 
+    transparent 100%
+  );
+  box-shadow: 0 0 12px rgba(255, 69, 0, 0.4);
+}
+
+.ornament-svg-box {
+  width: 100%;
+  max-width: 750px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ornament-svg {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 2px 8px rgba(191, 149, 63, 0.25));
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.ornament-wrapper:hover .ornament-svg {
+  transform: scale(1.02);
+  filter: drop-shadow(0 4px 16px rgba(191, 149, 63, 0.45));
+}
+
+.ornament-text {
+  text-align: center;
+  margin: 12px 0 6px 0;
+}
+
+.ornament-title {
+  font-size: 24px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #bf953f 0%, #fcf6ba 40%, #b38728 70%, #fbf5b7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
+}
+
+.shami-font { font-family: 'Aref Ruqaa', 'Amiri', serif; }
+.saudi-font { font-family: 'Amiri', 'Tajawal', serif; }
+.kuwaiti-font { font-family: 'KOOkies', 'Tajawal', sans-serif; }
+.andalusian-font { font-family: 'Reem Kufi', 'Amiri', serif; }
+.mexican-font { 
+  font-family: 'KOOkies', 'Tajawal', sans-serif;
+  background: linear-gradient(135deg, #ff4500 0%, #ffd700 50%, #ff8c00 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.ornament-subtitle {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--color-ink-muted-48);
+  margin-top: 4px;
+}
+
+/* Glass Line Simple Variant */
+.glass-theme {
+  padding: 24px 0;
+}
+.glass-line-track {
+  width: 80%;
+  max-width: 800px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+  border-radius: 2px;
+}
+.glass-line-glow {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent 0%, var(--color-primary) 50%, transparent 100%);
+  opacity: 0.6;
+}
